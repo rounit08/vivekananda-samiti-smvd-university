@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/images/Vivekanand Samiti logo .png"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Margarine&display=swap"
+      rel="stylesheet"
+    />
+    <meta property="og:title" content="Swami Vivekananda Samiti, SMVDU Katra" />
+    <meta
+      property="og:description"
+      content="Swami Vivekananda Samiti is under the Hindi Cell of Shri Mata Vaishno Devi University. The aim of this samiti is to provide knowledge about Swami ji to the youth for the life."
+    />
+    <meta
+      property="og:image"
+      content="https://drive.google.com/file/d/1C65tCIMx6LrOhg4ggB39zdcLCmB5SeWJ/view?usp=sharing"
+    />
+
+    <meta property="og:type" content="website" />
+
+    <meta
+      name="twitter:card"
+      content="https://drive.google.com/file/d/1C65tCIMx6LrOhg4ggB39zdcLCmB5SeWJ/view?usp=sharing"
+    />
+    <meta
+      name="twitter:title"
+      content="Swami Vivekananda Samiti, SMVDU Katra"
+    />
+    <meta name="twitter:description" content="Description for Twitter" />
+    <meta
+      name="twitter:image"
+      content="https://drive.google.com/file/d/1C65tCIMx6LrOhg4ggB39zdcLCmB5SeWJ/view?usp=sharing"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              vivek: "#E6813D",
+            },
+            fontFamily: {
+              swami: ["Wittgenstein", "sans-serif"],
+              narendra: ["Margarine", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <title>Vivekananda Samiti - SMVDU</title>
+  </head>
+  <body>
+    <div class="custom-container">
+      <nav
+        class="flex border-b border-vivek justify-between items-center py-2 bg-white font-swami !text-[#E6813D]"
+      >
+        <a
+          href="/"
+          class="transition duration-300 ease-in-out flex gap-2 items-center text-sm lg:text-xl font-bold"
+        >
+          <img src="./Vivekanand Samiti logo  1.svg" alt="samiti logo" />
+
+          <p class="hidden lg:block">
+            Swami Vivekananda Samiti <br />
+            Shri Mata Vaishno Devi University
+          </p>
+        </a>
+        <button
+          class="md:hidden flex justify-center w-8 h-8 bg-gray-800 hover:bg-gray-700 transition duration-300 ease-in-out"
+          id="nav-toggle"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="#fff"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <rect x="4" y="4" width="8" height="8" rx="1" fill="#fff"></rect>
+            <rect x="12" y="4" width="8" height="8" rx="1" fill="#fff"></rect>
+            <rect x="4" y="12" width="8" height="8" rx="1" fill="#fff"></rect>
+            <rect x="12" y="12" width="8" height="8" rx="1" fill="#fff"></rect>
+          </svg>
+        </button>
+        <div
+          id="nav-items"
+          class="hidden font-medium absolute lg:static top-0 right-0 w-full lg:w-1/2 h-full bg-white lg:flex justify-between items-center gap-3"
+        >
+          <svg
+            id="close-icon"
+            class="lg:hidden absolute right-2 top-2"
+            width="50px"
+            height="50px"
+            viewBox="0 -0.5 25 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M6.96967 16.4697C6.67678 16.7626 6.67678 17.2374 6.96967 17.5303C7.26256 17.8232 7.73744 17.8232 8.03033 17.5303L6.96967 16.4697ZM13.0303 12.5303C13.3232 12.2374 13.3232 11.7626 13.0303 11.4697C12.7374 11.1768 12.2626 11.1768 11.9697 11.4697L13.0303 12.5303ZM11.9697 11.4697C11.6768 11.7626 11.6768 12.2374 11.9697 12.5303C12.2626 12.8232 12.7374 12.8232 13.0303 12.5303L11.9697 11.4697ZM18.0303 7.53033C18.3232 7.23744 18.3232 6.76256 18.0303 6.46967C17.7374 6.17678 17.2626 6.17678 16.9697 6.46967L18.0303 7.53033ZM13.0303 11.4697C12.7374 11.1768 12.2626 11.1768 11.9697 11.4697C11.6768 11.7626 11.6768 12.2374 11.9697 12.5303L13.0303 11.4697ZM16.9697 17.5303C17.2626 17.8232 17.7374 17.8232 18.0303 17.5303C18.3232 17.2374 18.3232 16.7626 18.0303 16.4697L16.9697 17.5303ZM11.9697 12.5303C12.2626 12.8232 12.7374 12.8232 13.0303 12.5303C13.3232 12.2374 13.3232 11.7626 13.0303 11.4697L11.9697 12.5303ZM8.03033 6.46967C7.73744 6.17678 7.26256 6.17678 6.96967 6.46967C6.67678 6.76256 6.67678 7.23744 6.96967 7.53033L8.03033 6.46967ZM8.03033 17.5303L13.0303 12.5303L11.9697 11.4697L6.96967 16.4697L8.03033 17.5303ZM13.0303 12.5303L18.0303 7.53033L16.9697 6.46967L11.9697 11.4697L13.0303 12.5303ZM11.9697 12.5303L16.9697 17.5303L18.0303 16.4697L13.0303 11.4697L11.9697 12.5303ZM13.0303 11.4697L8.03033 6.46967L6.96967 7.53033L11.9697 12.5303L13.0303 11.4697Z"
+                fill="#E6813D"
+              ></path>
+            </g>
+          </svg>
+          <ul
+            class="lg:flex gap-10 text-2xl lg:text-lg mt-16 lg:mt-0 text-nowrap"
+          >
+            <li class="py-6 pl-4 lg:pl-0 lg:py-0">
+              <a
+                href="./about.html"
+                class="lg:hover:bg-vivek lg:hover:text-white rounded p-2 transition duration-300 ease-in-out"
+                >About Us</a
+              >
+            </li>
+            <li class="py-6 pl-4 lg:pl-0 lg:py-0">
+              <a
+                href="/"
+                class="lg:hover:bg-vivek lg:hover:text-white rounded p-2 transition duration-300 ease-in-out"
+                >Activities</a
+              >
+            </li>
+            <li class="py-6 pl-4 lg:pl-0 lg:py-0">
+              <a
+                href="/"
+                class="lg:hover:bg-vivek lg:hover:text-white p-2 rounded transition duration-300 ease-in-out"
+                >News & Events</a
+              >
+            </li>
+            <li class="py-6 pl-4 lg:pl-0 lg:py-0">
+              <a
+                href="/team.html"
+                class="lg:hover:bg-vivek lg:hover:text-white p-2 rounded transition duration-300 ease-in-out"
+                >Team</a
+              >
+            </li>
+            <li class="py-6 pl-4 lg:pl-0 lg:py-0">
+              <a
+                href="./contact.html"
+                class="lg:hover:bg-vivek lg:hover:text-white p-2 rounded transition duration-300 ease-in-out"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- navbar ends -->
+      <div class="infosection">
+        <div
+          class="infotext flex flex-col gap-3 lg:w-1/2 h-full lg:pt-20 lg:px-10"
+        >
+          <h1 class="font-bold text-2xl lg:text-4xl font-narendra text-white">
+            Swami Vivekananda Samiti
+          </h1>
+          <p class="text-sm md:text-base text-white font-semibold mt-6">
+            Swami Vivekanand Samiti is a committee under Hindi Cell (Shri Mata
+            Vaishno Devi University). The objective of this committee is to
+            spread Vedanta, language, scriptures and Indian tradition among
+            students and university family. Following the path of Swami
+            Vivekanand, the foundation of a brilliant and influential
+            personality like him is to be laid in the youth so that they can
+            prove useful for the benefit of the nation and society. Monks,
+            Professors and Literary figures from the prestigious institutions of
+            the country are associated with this committee, which makes this
+            committee more effective.
+          </p>
+          <button
+            aria-label="know more button"
+            class="text-white bg-orange-600 p-3 lg:px-5 rounded-lg font-semibold cursor-pointer w-1/2 md:w-1/3 lg:w-1/4"
+          >
+            <a href="/about.html">Know More</a>
+          </button>
+        </div>
+      </div>
+      <!-- hero section ends  -->
+
+      <div class="mt-10 flex flex-col lg:flex-row">
+        <div class="flex flex-col items-center gap-4">
+          <span class="text-xl font-bold text-vivek"
+            >स्वामी विवेकानंद जी की जीवनी
+          </span>
+          <iframe
+            class="w-[400px] lg:w-[516px]"
+            width="400"
+            height="315"
+            src="https://www.youtube.com/embed/04ceHW8CVVU?si=lhu3uIBAnBp4Sq96"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <div class="flex flex-col gap-3 justify-center p-3 px-6">
+          <div class="flex flex-col">
+            <p class="text-xl font-semibold">
+              "स्वामीजी ने पूर्व और पश्चिम, धर्म और विज्ञान, अतीत और वर्तमान को
+              समन्वित किया। और इसलिए वे महान हैं। उनके उपदेशों से हमारे
+              देशवासियों ने अभूतपूर्व आत्म-सम्मान, आत्म-निर्भरता और
+              आत्म-प्रवर्तन प्राप्त किया है।"
+            </p>
+            <span class="self-end">- सुभाष चंद्र बोस</span>
+          </div>
+          <div class="flex flex-col">
+            <p class="text-xl font-semibold">
+              "यदि आप भारत को जानना चाहते हैं, तो विवेकानंद का अध्ययन करें।
+              उनमें सब कुछ सकारात्मक है और कुछ भी नकारात्मक नहीं।"
+            </p>
+            <span class="self-end">- रवींद्रनाथ टैगोर</span>
+          </div>
+        </div>
+      </div>
+      <!-- jeevani section ends  -->
+
+      <div class="mt-10 flex flex-col lg:flex-row-reverse">
+        <div class="flex flex-col items-center gap-4">
+          <span class="text-xl font-bold text-vivek"
+            >स्वामी विवेकानंद का ऐतिहासिक भाषण: विश्व धर्म महासभा, <br />
+            शिकागो, सितंबर १८९३
+          </span>
+          <iframe
+            class="w-[400px] lg:w-[516px]"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/vPDQOB7pRRM?si=Dg711a_UgyWwMXxm"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <div class="flex flex-col gap-3 justify-center p-3 px-6">
+          <div class="flex flex-col">
+            <p class="text-xl font-semibold">
+              "I am proud to belong to a religion which has taught the world
+              both tolerance and universal acceptance."
+            </p>
+            <span class="self-end"
+              >- Swami Vivekananda, <br />
+              1893 Chicago Speech</span
+            >
+          </div>
+          <div class="flex flex-col">
+            <p class="text-xl font-semibold">
+              "मुझे गर्व है कि मेरा धर्म उन्हें सिखाता है जो दुनिया को सहनशीलता
+              और सर्वव्यापी स्वीकृति दोनों सिखाता है।"
+            </p>
+            <span class="self-end"
+              >- स्वामी विवेकानंद, <br />
+              शिकागो भाषण, सितंबर १८९३</span
+            >
+
+            <p>
+              Read Full Speech
+              <a
+                href="https://belurmath.org/swami-vivekananda-speeches-at-the-parliament-of-religions-chicago-1893/"
+                target="_blank"
+                class="text-vivek font-bold"
+                >here</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="gallery mt-6">
+        <div class="marquee">
+          <div class="marquee__group">
+            <img
+              src="./assets/images/swamijigallery/swamiji-image1.png"
+              alt=""
+            />
+            <img
+              src="./assets/images/swamijigallery/swamiji-image2.png"
+              alt=""
+            />
+            <img
+              src="./assets/images/swamijigallery/swamiji -image3.png"
+              alt=""
+            />
+            <img
+              src="./assets/images/swamijigallery/swamiji-image4.png"
+              alt=""
+            />
+            <img
+              src="./assets/images/swamijigallery/swamiji-image5.png"
+              alt=""
+            />
+          </div>
+
+          <div aria-hidden="true" class="marquee__group">
+            <img
+              src="./assets/images/swamijigallery/swamiji-image5.png"
+              alt=""
+            />
+            <img
+              src="./assets/images/swamijigallery/swamiji-image4.png"
+              alt=""
+            />
+            <img
+              src="./assets/images/swamijigallery/swamiji-image3.png"
+              alt=""
+            />
+            <img
+              src="./assets/images/swamijigallery/swamiji-image2.png"
+              alt=""
+            />
+            <img
+              src="./assets/images/swamijigallery/swamiji-image1.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="marquee marquee--borders" style="--duration: 100s">
+          <div class="marquee__group">
+            <p>Swami Vivekananda</p>
+            <p aria-hidden="true">स्वामी विवेकानंद</p>
+            <p aria-hidden="true">Swami Vivekananda</p>
+          </div>
+
+          <div aria-hidden="true" class="marquee__group">
+            <p>स्वामी विवेकानंद</p>
+            <p>Swami Vivekananda</p>
+            <p>स्वामी विवेकानंद</p>
+          </div>
+        </div>
+
+        <div class="marquee marquee--reverse">
+          <div class="marquee__group">
+            <img
+              src="./assets/images/swamijigallery/swamiji-image6.png"
+              alt=""
+            />
+            <img
+              src="./assets/images/swamijigallery/swamiji-image7.png"
+              alt=""
+            />
+            <img
+              src="./assets/images/swamijigallery/swamiji-image8.png"
+              alt=""
+            />
+            <img
+              src="./assets/images/swamijigallery/swamiji-image9.png"
+              alt=""
+            />
+            <img
+              src="./assets/images/swamijigallery/swamiji -image3.png"
+              alt=""
+            />
+          </div>
+
+          <div aria-hidden="true" class="marquee__group">
+            <img
+              src="./assets/images/swamijigallery/swamiji-image6.png"
+              alt=""
+            />
+            <img
+              src="./assets/images/swamijigallery/swamiji-image9.png"
+              alt=""
+            />
+            <img
+              src="./assets/images/swamijigallery/swamiji-image8.png"
+              alt=""
+            />
+            <img
+              src="./assets/images/swamijigallery/swamiji-image7.png"
+              alt=""
+            />
+            <img
+              src="./assets/images/swamijigallery/swamiji-image6.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col my-6 lg:px-20 lg:py-10">
+        <p class="text-2xl lg:text-4xl font-semibold">
+          जिस समय जिस काम के लिए प्रतिज्ञा करो, ठीक उसी समय पर उसे करना ही
+          चाहिए, नहीं तो लोगों का विश्वास उठ जाता है।
+        </p>
+        <span class="self-end text-xl lg:text-2xl">- स्वामी विवेकानंद </span>
+      </div>
+      <footer
+        class="bg-black text-white flex flex-col p-10 py-20 justify-center"
+      >
+        <div class="grid grid-cols-2 lg:flex gap-[90px] justify-center">
+          <div class="column flex flex-col gap-5">
+            <h2 class="font-bold text-2xl">SMVDU Links</h2>
+            <ul class="flex flex-col gap-2">
+              <li>
+                <a href="https://smvdu.ac.in/"> SMVDU Website </a>
+              </li>
+              <li>
+                <a href="https://hindicell.smvdu.ac.in/">Hindi Cell</a>
+              </li>
+              <li>
+                <a href="https://smvdu.ac.in/campus-life/dean-of-students/"
+                  >DOS SMVDU</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="column gap-5 flex flex-col">
+            <h2 class="font-bold text-2xl">About</h2>
+            <ul class="flex flex-col gap-2">
+              <li><a href="./about.html">About Us</a></li>
+              <li><a href="./about.html">Mission</a></li>
+              <li><a href="./about.html">Vision</a></li>
+              <li><a href="https://rkmjammu.org/">RKM Jammu</a></li>
+            </ul>
+          </div>
+
+          <div class="column col-end-2 flex flex-col gap-5">
+            <h2 class="font-bold text-2xl">Activities</h2>
+            <ul class="flex flex-col gap-2">
+              <li>Lectures</li>
+              <li>Camp/Workshop</li>
+              <li>Book Fair</li>
+              <li>Competition</li>
+            </ul>
+          </div>
+
+          <div
+            class="column row-start-3 w-[100vw] lg:w-auto flex flex-col gap-5"
+          >
+            <h2 class="font-bold text-2xl">Contact</h2>
+            <ul>
+              <li>Swami Vivekananda Samiti, Hindi Cell Office</li>
+              <li>Department of Languages & Literature</li>
+              <li>Shri Mata Vaishno Devi University</li>
+              <li>Katra, Jammu & Kashmir-182320</li>
+              <span>Email:</span>
+              <a href="mailto:vivekanandasamiti@smvdu.ac.in"
+                >vivekanandasamiti@smvdu.ac.in</a
+              >
+              <a href="mailto:hindi.cell@smvdu.ac.in" class="pl-2"
+                >hindi.cell@smvdu.ac.in</a
+              >
+            </ul>
+          </div>
+        </div>
+        <div
+          class="flex flex-col-reverse gap-3 lg:flex-row items-center lg:px-20 justify-between"
+        >
+          <div class="flex gap-3">
+            <a href="https://www.linkedin.com/company/hindicellsmvdu">
+              <svg
+                width="30px"
+                height="30px"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    fill="#0A66C2"
+                    d="M12.225 12.225h-1.778V9.44c0-.664-.012-1.519-.925-1.519-.926 0-1.068.724-1.068 1.47v2.834H6.676V6.498h1.707v.783h.024c.348-.594.996-.95 1.684-.925 1.802 0 2.135 1.185 2.135 2.728l-.001 3.14zM4.67 5.715a1.037 1.037 0 01-1.032-1.031c0-.566.466-1.032 1.032-1.032.566 0 1.031.466 1.032 1.032 0 .566-.466 1.032-1.032 1.032zm.889 6.51h-1.78V6.498h1.78v5.727zM13.11 2H2.885A.88.88 0 002 2.866v10.268a.88.88 0 00.885.866h10.226a.882.882 0 00.889-.866V2.865a.88.88 0 00-.889-.864z"
+                  ></path>
+                </g>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/hindicellsmvdu">
+              <svg
+                width="30px"
+                height="30px"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <rect
+                    x="2"
+                    y="2"
+                    width="28"
+                    height="28"
+                    rx="6"
+                    fill="url(#paint0_radial_87_7153)"
+                  ></rect>
+                  <rect
+                    x="2"
+                    y="2"
+                    width="28"
+                    height="28"
+                    rx="6"
+                    fill="url(#paint1_radial_87_7153)"
+                  ></rect>
+                  <rect
+                    x="2"
+                    y="2"
+                    width="28"
+                    height="28"
+                    rx="6"
+                    fill="url(#paint2_radial_87_7153)"
+                  ></rect>
+                  <path
+                    d="M23 10.5C23 11.3284 22.3284 12 21.5 12C20.6716 12 20 11.3284 20 10.5C20 9.67157 20.6716 9 21.5 9C22.3284 9 23 9.67157 23 10.5Z"
+                    fill="white"
+                  ></path>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M16 21C18.7614 21 21 18.7614 21 16C21 13.2386 18.7614 11 16 11C13.2386 11 11 13.2386 11 16C11 18.7614 13.2386 21 16 21ZM16 19C17.6569 19 19 17.6569 19 16C19 14.3431 17.6569 13 16 13C14.3431 13 13 14.3431 13 16C13 17.6569 14.3431 19 16 19Z"
+                    fill="white"
+                  ></path>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M6 15.6C6 12.2397 6 10.5595 6.65396 9.27606C7.2292 8.14708 8.14708 7.2292 9.27606 6.65396C10.5595 6 12.2397 6 15.6 6H16.4C19.7603 6 21.4405 6 22.7239 6.65396C23.8529 7.2292 24.7708 8.14708 25.346 9.27606C26 10.5595 26 12.2397 26 15.6V16.4C26 19.7603 26 21.4405 25.346 22.7239C24.7708 23.8529 23.8529 24.7708 22.7239 25.346C21.4405 26 19.7603 26 16.4 26H15.6C12.2397 26 10.5595 26 9.27606 25.346C8.14708 24.7708 7.2292 23.8529 6.65396 22.7239C6 21.4405 6 19.7603 6 16.4V15.6ZM15.6 8H16.4C18.1132 8 19.2777 8.00156 20.1779 8.0751C21.0548 8.14674 21.5032 8.27659 21.816 8.43597C22.5686 8.81947 23.1805 9.43139 23.564 10.184C23.7234 10.4968 23.8533 10.9452 23.9249 11.8221C23.9984 12.7223 24 13.8868 24 15.6V16.4C24 18.1132 23.9984 19.2777 23.9249 20.1779C23.8533 21.0548 23.7234 21.5032 23.564 21.816C23.1805 22.5686 22.5686 23.1805 21.816 23.564C21.5032 23.7234 21.0548 23.8533 20.1779 23.9249C19.2777 23.9984 18.1132 24 16.4 24H15.6C13.8868 24 12.7223 23.9984 11.8221 23.9249C10.9452 23.8533 10.4968 23.7234 10.184 23.564C9.43139 23.1805 8.81947 22.5686 8.43597 21.816C8.27659 21.5032 8.14674 21.0548 8.0751 20.1779C8.00156 19.2777 8 18.1132 8 16.4V15.6C8 13.8868 8.00156 12.7223 8.0751 11.8221C8.14674 10.9452 8.27659 10.4968 8.43597 10.184C8.81947 9.43139 9.43139 8.81947 10.184 8.43597C10.4968 8.27659 10.9452 8.14674 11.8221 8.0751C12.7223 8.00156 13.8868 8 15.6 8Z"
+                    fill="white"
+                  ></path>
+                  <defs>
+                    <radialGradient
+                      id="paint0_radial_87_7153"
+                      cx="0"
+                      cy="0"
+                      r="1"
+                      gradientUnits="userSpaceOnUse"
+                      gradientTransform="translate(12 23) rotate(-55.3758) scale(25.5196)"
+                    >
+                      <stop stop-color="#B13589"></stop>
+                      <stop offset="0.79309" stop-color="#C62F94"></stop>
+                      <stop offset="1" stop-color="#8A3AC8"></stop>
+                    </radialGradient>
+                    <radialGradient
+                      id="paint1_radial_87_7153"
+                      cx="0"
+                      cy="0"
+                      r="1"
+                      gradientUnits="userSpaceOnUse"
+                      gradientTransform="translate(11 31) rotate(-65.1363) scale(22.5942)"
+                    >
+                      <stop stop-color="#E0E8B7"></stop>
+                      <stop offset="0.444662" stop-color="#FB8A2E"></stop>
+                      <stop offset="0.71474" stop-color="#E2425C"></stop>
+                      <stop
+                        offset="1"
+                        stop-color="#E2425C"
+                        stop-opacity="0"
+                      ></stop>
+                    </radialGradient>
+                    <radialGradient
+                      id="paint2_radial_87_7153"
+                      cx="0"
+                      cy="0"
+                      r="1"
+                      gradientUnits="userSpaceOnUse"
+                      gradientTransform="translate(0.500002 3) rotate(-8.1301) scale(38.8909 8.31836)"
+                    >
+                      <stop offset="0.156701" stop-color="#406ADC"></stop>
+                      <stop offset="0.467799" stop-color="#6A45BE"></stop>
+                      <stop
+                        offset="1"
+                        stop-color="#6A45BE"
+                        stop-opacity="0"
+                      ></stop>
+                    </radialGradient>
+                  </defs>
+                </g>
+              </svg>
+            </a>
+          </div>
+          <div class="flex gap-2 self-end mt-10">
+            <a href="https://smvdu.ac.in">
+              <img
+                src="./assets/images/logo (1).png"
+                alt="smvdu logo"
+                width="120"
+                class="object-contain mt-[-10px]"
+              />
+            </a>
+
+            <a href="https://www.maavaishnodevi.org/">
+              <img
+                src="./assets/images/images (1) (1).jpeg"
+                alt="shrine board logo"
+                width="80"
+                class="object-contain mr-5"
+              />
+            </a>
+            <a href="https://hindicell.smvdu.ac.in/">
+              <img
+                src="./assets/images/logo.png"
+                alt="hindi cell SMVDU logo"
+                width="80"
+                class="object-contain"
+                class="object-contain"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-20">
+          <span>© Copyright 2024 Swami Vivekananda Samiti, SMVDU</span>
+        </div>
+      </footer>
+
+      <!-- footer ends  -->
+    </div>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
