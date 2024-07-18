@@ -9,37 +9,34 @@ body {
 }
 
 .infosection {
-  background-image: url("./assets/images/swamiji-removebg-preview.png");
-  height: 55vh;
+  height: fill;
+  padding: 50px;
   margin-top: 10px;
-  object-fit: contain;
+  object-fit: cover;
   background-repeat: no-repeat;
-  background-color: #c28251;
-  background-size: fill;
-  background-position: right;
+  background-size: contain;
 }
 
 li {
   cursor: pointer;
 }
 .infotext {
-  background: linear-gradient(to right, hsl(27, 72%, 90%, 0.3), #c28251);
   padding: 20px;
 }
 
 @media only screen and (max-width: 768px) {
-  .infosection {
-    background-image: url("./assets/images/swamiji-removebg-preview.png");
-    height: 65vh;
-    margin-top: 10px;
-    object-fit: contain;
-  }
-  .infotext {
-    padding-top: 18vh;
-    gap: 10px;
-  }
   .teamcard {
     width: 350px !important;
+  }
+  .slides img {
+    height: 22vh !important;
+  }
+  .infotext {
+    padding: 0;
+    width: auto;
+  }
+  .infotext p {
+    width: 90vw;
   }
 }
 
@@ -204,6 +201,10 @@ input[type="submit"]:hover {
   animation-delay: calc(var(--duration) / -2);
 }
 
+.marquee img {
+  object-fit: contain;
+}
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -212,4 +213,105 @@ input[type="submit"]:hover {
   100% {
     transform: translateX(calc(-100% - var(--gap)));
   }
+}
+
+.hero-container {
+  margin-inline: auto;
+  max-width: 1440px;
+}
+
+.custom-container {
+  padding-inline: unset;
+}
+.title {
+  font-size: clamp(35px, 4vw, 50px);
+  line-height: clamp(40px, 5vw, 65px);
+}
+.superTitle {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+  color: #414ba6;
+  text-align: left;
+}
+.content_wrapper {
+  flex: 0 0 calc(55% - 100px);
+}
+.subtitle1 {
+  font-size: 16px !important;
+  font-weight: 400;
+  line-height: 1.75rem;
+  text-align: left;
+  color: #505050;
+}
+
+.carousel {
+  position: relative;
+  width: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+  width: 1440px;
+  height: 600px;
+  object-fit: contain;
+  border-right: 2px solid #f0f0f0;
+}
+
+.slides img:last-child {
+  border-right: none;
+}
+
+.controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.control {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 2rem;
+}
+
+.control:focus {
+  outline: none;
+}
+
+.indicators {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.indicator.active {
+  background: #e6813d;
 }

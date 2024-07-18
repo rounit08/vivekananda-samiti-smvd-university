@@ -12,6 +12,11 @@
       rel="stylesheet"
     />
     <link
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
       rel="icon"
       type="image/png"
       href="./assets/images/Vivekanand Samiti logo .png"
@@ -53,6 +58,7 @@
             fontFamily: {
               swami: ["Wittgenstein", "sans-serif"],
               narendra: ["Margarine", "sans-serif"],
+              hindi: ["Kalam", "cursive"],
             },
           },
         },
@@ -63,7 +69,7 @@
   <body>
     <div class="custom-container">
       <nav
-        class="flex border-b border-vivek justify-between items-center py-2 bg-white font-swami !text-[#E6813D]"
+        class="flex border-b border-vivek justify-between items-center py-2 bg-white font-swami !text-[#E6813D] z-[99999]"
       >
         <a
           href="/"
@@ -94,7 +100,7 @@
         </button>
         <div
           id="nav-items"
-          class="hidden font-medium absolute lg:static top-0 right-0 w-full lg:w-1/2 h-full bg-white lg:flex justify-between items-center gap-3"
+          class="hidden font-medium absolute lg:static top-0 right-0 w-full lg:w-1/2 h-full bg-white lg:flex justify-between items-center gap-3 z-[999999]"
         >
           <svg
             id="close-icon"
@@ -160,14 +166,36 @@
         </div>
       </nav>
       <!-- navbar ends -->
-      <div class="infosection">
+
+      <div class="carousel z-20">
+        <div class="slides">
+          <img src="./assets/images/caarouselimages/1.png" alt="Image 1" />
+          <img src="./assets/images/caarouselimages/2.png" alt="Image 2" />
+          <img src="./assets/images/caarouselimages/3.png" alt="Image 3" />
+        </div>
+        <div class="controls">
+          <button id="prev" class="control">❮</button>
+          <button id="next" class="control">❯</button>
+        </div>
+        <div class="indicators">
+          <span class="indicator active" data-index="0"></span>
+          <span class="indicator" data-index="1"></span>
+          <span class="indicator" data-index="2"></span>
+        </div>
+      </div>
+
+      <div class="infosection bg-vivek">
         <div
-          class="infotext flex flex-col gap-3 lg:w-1/2 h-full lg:pt-20 lg:px-10"
+          class="infotext font-sans flex flex-col items-center gap-3 lg:pt-20 lg:px-10"
         >
-          <h1 class="font-bold text-2xl lg:text-4xl font-narendra text-white">
+          <h1
+            class="font-bold text-2xl lg:text-5xl font-sans border-b w-full text-center pb-2 text-white"
+          >
             Swami Vivekanand Samiti
           </h1>
-          <p class="text-sm md:text-base text-white font-semibold mt-6">
+          <p
+            class="text-sm md:text-base text-center w-2/3 pb-4 text-white font-semibold mt-6"
+          >
             Swami Vivekanand Samiti is a committee under Hindi Cell (Shri Mata
             Vaishno Devi University). The objective of this committee is to
             spread Vedanta, language, scriptures and Indian tradition among
@@ -191,7 +219,7 @@
 
       <div class="mt-10 flex flex-col lg:flex-row">
         <div class="flex flex-col items-center gap-4">
-          <span class="text-xl font-bold text-vivek"
+          <span class="text-xl font-bold text-vivek font-hindi"
             >स्वामी विवेकानंद जी की जीवनी
           </span>
           <iframe
@@ -207,7 +235,7 @@
           ></iframe>
         </div>
 
-        <div class="flex flex-col gap-3 justify-center p-3 px-6">
+        <div class="flex flex-col gap-3 justify-center p-3 px-6 font-hindi">
           <div class="flex flex-col">
             <p class="text-xl font-semibold">
               "स्वामीजी ने पूर्व और पश्चिम, धर्म और विज्ञान, अतीत और वर्तमान को
@@ -215,14 +243,14 @@
               देशवासियों ने अभूतपूर्व आत्म-सम्मान, आत्म-निर्भरता और
               आत्म-प्रवर्तन प्राप्त किया है।"
             </p>
-            <span class="self-end">- सुभाष चंद्र बोस</span>
+            <span class="self-end">- नेताजी सुभाष चंद्र बोस</span>
           </div>
           <div class="flex flex-col">
             <p class="text-xl font-semibold">
               "यदि आप भारत को जानना चाहते हैं, तो विवेकानंद का अध्ययन करें।
               उनमें सब कुछ सकारात्मक है और कुछ भी नकारात्मक नहीं।"
             </p>
-            <span class="self-end">- रवींद्रनाथ टैगोर</span>
+            <span class="self-end">-गुरुदेव रवींद्रनाथ टैगोर</span>
           </div>
         </div>
       </div>
@@ -230,7 +258,7 @@
 
       <div class="mt-10 flex flex-col lg:flex-row-reverse">
         <div class="flex flex-col items-center gap-4">
-          <span class="text-xl font-bold text-vivek"
+          <span class="text-xl font-bold text-vivek px-5 lg:px-0 text-center"
             >स्वामी विवेकानंद का ऐतिहासिक भाषण: विश्व धर्म महासभा, <br />
             शिकागो, सितंबर १८९३
           </span>
@@ -258,7 +286,7 @@
               1893 Chicago Speech</span
             >
           </div>
-          <div class="flex flex-col">
+          <div class="flex flex-col font-hindi">
             <p class="text-xl font-semibold">
               "मुझे गर्व है कि मेरा धर्म उन्हें सिखाता है जो दुनिया को सहनशीलता
               और सर्वव्यापी स्वीकृति दोनों सिखाता है।"
@@ -391,8 +419,8 @@
         </div>
       </div>
 
-      <div class="flex flex-col my-6 lg:px-20 lg:py-10">
-        <p class="text-2xl lg:text-4xl font-semibold">
+      <div class="flex flex-col my-6 px-5 lg:px-20 lg:py-10 font-hindi">
+        <p class="text-xl lg:text-3xl font-semibold">
           जिस समय जिस काम के लिए प्रतिज्ञा करो, ठीक उसी समय पर उसे करना ही
           चाहिए, नहीं तो लोगों का विश्वास उठ जाता है।
         </p>
@@ -442,7 +470,7 @@
             </div>
 
             <div
-              class="column row-start-3 w-[100vw] lg:w-auto flex flex-col gap-5"
+              class="column row-start-3 w-[60vw] lg:w-auto flex flex-col gap-5"
             >
               <h2 class="font-bold text-2xl">Contact</h2>
               <ul>
@@ -450,13 +478,40 @@
                 <li>Department of Languages & Literature</li>
                 <li>Shri Mata Vaishno Devi University</li>
                 <li>Katra, Jammu & Kashmir-182320</li>
-                <span>Email:</span>
-                <a href="mailto:Vivekanandsamiti@smvdu.ac.in"
-                  >Vivekanandsamiti@smvdu.ac.in</a
-                >
-                <a href="mailto:hindi.cell@smvdu.ac.in" class="pl-2"
-                  >hindi.cell@smvdu.ac.in</a
-                >
+                <div class="flex gap-2 items-center">
+                  <span
+                    ><svg
+                      width="24px"
+                      height="24px"
+                      viewBox="0 0 24 24"
+                      fill="#fff"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M3.75 5.25L3 6V18L3.75 18.75H20.25L21 18V6L20.25 5.25H3.75ZM4.5 7.6955V17.25H19.5V7.69525L11.9999 14.5136L4.5 7.6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z"
+                          fill="#00000"
+                        ></path>
+                      </g>
+                    </svg>
+                  </span>
+                  <div class="flex flex-col">
+                    <a href="mailto:Vivekanandsamiti@smvdu.ac.in"
+                      >Vivekanandsamiti@smvdu.ac.in</a
+                    >
+                    <a href="mailto:hindi.cell@smvdu.ac.in" class="pl-2"
+                      >hindi.cell@smvdu.ac.in</a
+                    >
+                  </div>
+                </div>
               </ul>
             </div>
           </div>
@@ -602,14 +657,6 @@
                 />
               </a>
 
-              <a href="https://www.maavaishnodevi.org/">
-                <img
-                  src="./assets/images/images (1) (1).jpeg"
-                  alt="shrine board logo"
-                  width="80"
-                  class="object-contain mr-5 w-[80px]"
-                />
-              </a>
               <a href="https://hindicell.smvdu.ac.in/">
                 <img
                   src="./assets/images/logo.png"

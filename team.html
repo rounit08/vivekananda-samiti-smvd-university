@@ -20,7 +20,10 @@
       href="https://fonts.googleapis.com/css2?family=Margarine&display=swap"
       rel="stylesheet"
     />
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
     <script>
       tailwind.config = {
         theme: {
@@ -31,6 +34,7 @@
             fontFamily: {
               swami: ["Wittgenstein", "sans-serif"],
               narendra: ["Margarine", "sans-serif"],
+              hindi: ["Kalam", "cursive"],
             },
           },
         },
@@ -142,7 +146,7 @@
       </div>
 
       <div
-        class="team-container font-swami flex flex-col md:grid justify-items-center grid-cols-2 gap-4 gap-x-0 items-center p-10 text-center"
+        class="team-container font-hindi flex flex-col md:grid justify-items-center grid-cols-2 gap-4 gap-x-0 items-center p-10 text-center"
       >
         <div class="teamcard flex flex-col gap-2 items-center justify-center">
           <img
@@ -152,7 +156,7 @@
             class="rounded-full object-contain"
           />
           <span>संरक्षक</span>
-          <span>प्रो. प्रगति कुमार </span>
+          <span class="font-semibold">प्रो. प्रगति कुमार </span>
           <p>(माननीय कुलपति, श्री माता वैष्णो देवी विश्वविद्यालय)</p>
         </div>
         <div class="teamcard flex flex-col gap-2 items-center justify-center">
@@ -163,7 +167,7 @@
             class="rounded-full aspect-square object-contain"
           />
           <span>मार्गदर्शक</span>
-          <span>परमपूज्य स्वामी यज्ञधरानंद </span>
+          <span class="font-semibold">परमपूज्य स्वामी यज्ञधरानंद </span>
           <p>(प्रधान सन्यासी एवं सचिव, रामकृष्ण मिशन जम्मू केंद्र)</p>
         </div>
         <div class="teamcard flex flex-col gap-2 items-center justify-center">
@@ -174,7 +178,7 @@
             class="rounded-full aspect-square object-contain"
           />
           <span>संस्थापक आचार्य </span>
-          <span>डॉ. अनुराग कुमार </span>
+          <span class="font-semibold">डॉ. अनुराग कुमार </span>
           <p>
             (विभागाध्यक्ष, भाषा एवं साहित्य विभाग) <br />
             (नोडल अधिकारी, हिन्दी प्रकोष्ठ) <br />
@@ -190,7 +194,7 @@
             class="rounded-full object-contain"
           />
           <span>संस्थापक छात्र </span>
-          <span>मिलिन्द कुमार शुक्ल </span>
+          <span class="font-semibold">मिलिन्द कुमार शुक्ल </span>
           <p>
             (छात्र, यांत्रिक अभियांत्रिकी 2020-2024) <br />
             (पूर्व छात्र सचिव, हिन्दी प्रकोष्ठ) <br />
@@ -206,7 +210,7 @@
             class="rounded-full aspect-square object-contain"
           />
           <span>वेबसाइट निर्माता</span>
-          <span>रौनित रंजन सिन्हा </span>
+          <span class="font-semibold">रौनित रंजन सिन्हा </span>
           <p>
             (छात्र, यांत्रिक अभियांत्रिकी 2020-2024) <br />
             (पूर्व सदस्य, हिन्दी प्रकोष्ठ)
@@ -255,7 +259,7 @@
           </div>
 
           <div
-            class="column row-start-3 w-[100vw] lg:w-auto flex flex-col gap-5"
+            class="column row-start-3 w-[60vw] lg:w-auto flex flex-col gap-5"
           >
             <h2 class="font-bold text-2xl">Contact</h2>
             <ul>
@@ -263,13 +267,40 @@
               <li>Department of Languages & Literature</li>
               <li>Shri Mata Vaishno Devi University</li>
               <li>Katra, Jammu & Kashmir-182320</li>
-              <span>Email:</span>
-              <a href="mailto:Vivekanandsamiti@smvdu.ac.in"
-                >Vivekanandsamiti@smvdu.ac.in</a
-              >
-              <a href="mailto:hindi.cell@smvdu.ac.in" class="pl-2"
-                >hindi.cell@smvdu.ac.in</a
-              >
+              <div class="flex gap-2 items-center">
+                <span
+                  ><svg
+                    width="24px"
+                    height="24px"
+                    viewBox="0 0 24 24"
+                    fill="#fff"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M3.75 5.25L3 6V18L3.75 18.75H20.25L21 18V6L20.25 5.25H3.75ZM4.5 7.6955V17.25H19.5V7.69525L11.9999 14.5136L4.5 7.6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z"
+                        fill="#00000"
+                      ></path>
+                    </g>
+                  </svg>
+                </span>
+                <div class="flex flex-col">
+                  <a href="mailto:Vivekanandsamiti@smvdu.ac.in"
+                    >Vivekanandsamiti@smvdu.ac.in</a
+                  >
+                  <a href="mailto:hindi.cell@smvdu.ac.in" class="pl-2"
+                    >hindi.cell@smvdu.ac.in</a
+                  >
+                </div>
+              </div>
             </ul>
           </div>
         </div>
@@ -415,14 +446,6 @@
               />
             </a>
 
-            <a href="https://www.maavaishnodevi.org/">
-              <img
-                src="./assets/images/images (1) (1).jpeg"
-                alt="shrine board logo"
-                width="80"
-                class="object-contain mr-5"
-              />
-            </a>
             <a href="https://hindicell.smvdu.ac.in/">
               <img
                 src="./assets/images/logo.png"
